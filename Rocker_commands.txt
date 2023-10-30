@@ -1,0 +1,27 @@
+Rocker is a A tool to run docker images with customized local support injected for things like nvidia support and 
+user id specific files for cleaner mounting file permissions.
+
+To install Rocker, check out https://github.com/osrf/rocker
+
+Integrated Extensions
+
+There are a number of integrated extensions here's some of the highlights. You can get full details on the extensions from the main rocker --help command.
+
+    x11 -- Enable the use of X11 inside the container via the host X instance.
+    nvidia -- Enable NVIDIA graphics cards for rendering
+    cuda -- Enable NVIDIA CUDA in the container
+    user -- Create a user inside the container with the same settings as the host and run commands inside the container as that user.
+    home -- Mount the user's home directory into the container
+    pulse -- Mount pulse audio into the container
+    ssh -- Pass through ssh access to the container.
+
+
+To run Gazebo on Melodic
+
+
+rocker --nvidia --x11 osrf/ros:melodic-desktop-full gazebo
+
+
+To mount volumes, simply use --volume /file_path_on_host_pc:/file_path_on_docker. The changes made in the docker will be reflected.
+
+For example: rocker --nvidia --x11 osrf/ros:humble-desktop-full --volume /home/ros_ws/my_robot_description:/home/ros_ws/my_robot_description
