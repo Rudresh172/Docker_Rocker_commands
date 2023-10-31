@@ -25,3 +25,5 @@ rocker --nvidia --x11 osrf/ros:melodic-desktop-full gazebo
 To mount volumes, simply use --volume /file_path_on_host_pc:/file_path_on_docker. The changes made in the docker will be reflected.
 
 For example: rocker --nvidia --x11 osrf/ros:humble-desktop-full --volume /home/ros_ws/my_robot_description:/home/ros_ws/my_robot_description
+
+rocker --x11 --volume ~/Downloads/docker_ros_noetic:/urdf_output --  ros:noetic
