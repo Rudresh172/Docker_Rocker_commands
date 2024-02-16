@@ -1,5 +1,6 @@
 # Docker
-This is an exhaustive list of commands used for docker 
+This is an exhaustive list of commands used for docker.
+TO install [Docker](https://docs.docker.com/engine/install/ubuntu/)
 
 #### To check number of running container | both running and not running
 ```
